@@ -189,6 +189,9 @@ nv.models.growthComparisonChart = function() {
                     return y(d3.min([d[1],d[2]]));
                 });
 
+            g.selectAll('.nv-areaWrap > *')
+                .remove();
+
             data.forEach(function(series,i) {
                 var valuesKeys = areaData.keys.reverse(),
                     pathIndex = i+1;
